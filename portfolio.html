@@ -6,18 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML 5 Boilerplate</title>
     <link rel="stylesheet" href="portfolio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jaro&display=swap" rel="stylesheet">
     <script src="portfolio.js" defer></script>
   </head>
   <body>
     <header>
       <nav class = "Navbar">
           <ul class = "Nav">
-              <li><img src="./Assets/youtube.svg" alt="Yak Logo">Logo/Home</li>
-              <li>Yakkubs.dev</li>
-              <li><img src="./Assets/moon.svg" alt="Dark Mode">DarkMode</li>
-              <li><img src="./Assets/paperclip.svg" alt="Resume">Resume</li>
-              <li><img src="./Assets/clipboard.svg" alt="Projects">Projects</li>
-              <li><img src="./Assets/mail.svg" alt="Contact">Contact</li>
+              <div class="left-side">
+                <li><img src="./Assets/youtube.svg" alt="Yak Logo"></li>
+                <li class="Dev_name">Yakkubs.dev</li>
+                <li><img src="./Assets/moon.svg" alt="Dark Mode"></li>
+              </div>
+              <div class="right-side">
+                <li class="icon"><img src="./Assets/paperclip.svg" alt="Resume" title="Resume"><span>Resume</span></li>
+                <li class="icon"><img src="./Assets/clipboard.svg" alt="Projects" title="Projects"><span>Projects</span></li>
+                <li class="icon"><img src="./Assets/mail.svg" alt="Contact" title="Contact"><span>Contact</span></li>
+              </div>
           </ul>
       </nav>
       <nav class="Sidebar">

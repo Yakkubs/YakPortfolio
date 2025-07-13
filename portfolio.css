@@ -20,6 +20,14 @@ body{
     height:100%;
 }
 
+body.dark-mode{
+    --site-bg-color: #1C1A1A;
+    --main-palate-color: #1f1f1f;
+    --secondary--palate-color: #3c4042;
+    --text-color: #E6E1DE;
+    --secondary-text-color: #A8A3A0;
+}
+
 .Navbar{
     position: fixed;
     top: 0;
@@ -62,11 +70,13 @@ body{
 }
 
 .Dev_name{
+    color: var(--text-color);
     font-size: 2.5vw;
     font-weight: bold;
     font-family: 'Jaro', sans-serif;
 }
 .icon{
+    color: var(--text-color);
     padding: 5px;
     font-size: 0.8vw;
     font-family: 'Jaro', sans-serif;
@@ -74,8 +84,11 @@ body{
 /*this is temperary, got this from chatGPT, not final solution for icons*/
 .Navbar .Nav li img,
 .Sidebar ul li img {
-    width: 40px;
-    height: 40px; 
+    color: var(--text-color);
+    width: 5vw;
+    height: 5vw;
+    max-width: 40px;
+    max-height: 40px; 
     vertical-align: middle;
     margin : 0;
 }
@@ -97,13 +110,24 @@ body{
     margin: 0;
 }
 .welcome{
+    display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    display: flex;
     padding-left: 30px;
     padding-right: 30px;
 }
+@media (max-width: 768px) {
+    .welcome {
+        flex-direction: column;
+        align-items: center;
+    }
+    .welcome-text, .welcome-img {
+        width: 100%;
+        flex: unset;
+    }
+}
 .welcome-text{
+    color: var(--text-color);
     flex: 4;
     align-items: top;
     font-family: 'Jaro', sans-serif;

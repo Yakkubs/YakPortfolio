@@ -13,11 +13,12 @@
 }
 
 body{
+    margin: 0;
     padding: 0;
+    padding-top: 8vh;
     background-color: var(--site-bg-color);
     margin-left: 5%;
-    margin-top: 8vh;
-    height:100%;
+    min-height: calc(100vh - 8vh);
 }
 
 body.dark-mode{
@@ -26,6 +27,11 @@ body.dark-mode{
     --secondary--palate-color: #3c4042;
     --text-color: #E6E1DE;
     --secondary-text-color: #A8A3A0;
+}
+
+body.dark-mode .Navbar .Nav li img,
+body.dark-mode .Sidebar ul li img {
+    filter: invert(1);
 }
 
 .Navbar{
@@ -44,7 +50,7 @@ body.dark-mode{
     margin: 0;
     height: 100%;
     width: 100%;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--text-color);
 }
 .Nav .left-side, .Nav .right-side{
     display: flex;
@@ -80,6 +86,9 @@ body.dark-mode{
     padding: 5px;
     font-size: 0.8vw;
     font-family: 'Jaro', sans-serif;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 /*this is temperary, got this from chatGPT, not final solution for icons*/
 .Navbar .Nav li img,
@@ -97,12 +106,12 @@ body.dark-mode{
     top: 8%;
     left: 0;
     width: 5%;
-    height: 100%;
+    height: calc(100% - 8%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-right: 1px solid black;
+    border-right: 1px solid var(--text-color);
 }
 .Sidebar ul{
     list-style-type: none;
@@ -146,4 +155,12 @@ body.dark-mode{
     width: 80%;
     height: auto;
     object-fit: cover;
+}
+.Headshot{
+    margin-top: 20px;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--text-color);
 }

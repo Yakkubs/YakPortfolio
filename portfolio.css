@@ -154,6 +154,21 @@ main.content {
         width: 100%;
         flex: unset;
     }
+    .welcome-text-semantics h1 {
+        font-size: 1.9rem;
+    }
+    .welcome-text-semantics li {
+        font-size: 0.95rem;
+    }
+    .welcome-text-jargon p {
+        font-size: 0.9rem;
+    }
+    .Dev_name {
+        font-size: 1.1rem;
+    }
+    .icon {
+        font-size: 1rem;
+    }
 }
 .welcome-text{
     color: var(--text-color);

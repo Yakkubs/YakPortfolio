@@ -6,19 +6,22 @@
     --secondary-text-color: #606368;
 }
   
-* ,
-*::after
-*::before{
+*, *::after, *::before {
     box-sizing: border-box;
 }
 
-body{
+html, body {
     margin: 0;
     padding: 0;
+    min-height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
     padding-top: 8vh;
     background-color: var(--site-bg-color);
-    margin-left: 5%;
-    min-height: calc(100vh - 8vh);
+    min-height: 100vh;
 }
 
 body.dark-mode{
@@ -77,9 +80,22 @@ body.dark-mode .Sidebar ul li img {
 
 .Dev_name{
     color: var(--text-color);
-    font-size: 2.5vw;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     font-weight: bold;
     font-family: 'Jaro', sans-serif;
+}
+.welcome-text-semantics h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+.welcome-text-semantics li {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    color: grey;
+    list-style: none;
+}
+.welcome-text-jargon p {
+    font-size: clamp(0.95rem, 2.5vw, 1.2rem);
+    line-height: 1.6;
 }
 .icon{
     color: var(--text-color);
@@ -102,11 +118,11 @@ body.dark-mode .Sidebar ul li img {
     margin : 0;
 }
 .Sidebar{
-    position: absolute;
+    position: fixed;
     top: 8%;
     left: 0;
     width: 5%;
-    height: calc(100% - 8%);
+    height: calc(100vh - 8vh);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -117,6 +133,10 @@ body.dark-mode .Sidebar ul li img {
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+main.content {
+    margin-left: 5%;
 }
 .welcome{
     display: flex;
